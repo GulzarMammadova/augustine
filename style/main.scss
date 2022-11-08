@@ -1,0 +1,456 @@
+@import "variables";
+@import "mixins";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif
+}
+
+.nav {
+    background-color: #fff;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        padding: 15px 25px;
+
+        .nav-logo img {
+            height: 30px;
+        }
+
+        .nav-list {
+            display: flex;
+            flex-direction: row;
+            column-gap: 50px;
+
+            .nav-items a {
+                list-style-type: none;
+                text-decoration: none;
+                color: #000;
+            }
+
+            @include mobile {
+                display: none;
+            }
+
+        }
+
+        .menu-icon {
+            display: none;
+
+            @include mobile {
+                display: block;
+            }
+        }
+    }
+
+    .nav-message {
+        height: 60px;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 30px;
+        align-items: center;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    .nav-message a {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+}
+
+#shop {
+
+    .shop-now {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: rgb(91, 22, 22);
+        column-gap: 50px;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            padding: 50px 50px;
+        }
+
+        .shop-now-img img {
+            width: 600px;
+            height: 688px;
+            padding-left: 30px;
+
+            @include mobile {
+                width: 382px;
+                height: 438px;
+            }
+        }
+
+        .shop-now-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+
+            @include mobile {
+                padding-left: 50px;
+                padding-top: 20px;
+            }
+
+            h1 {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 50px;
+                color: #fff;
+
+                @include mobile {
+                    font-size: 30px;
+                }
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 89px;
+                letter-spacing: 0.04em;
+                color: #fff;
+
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 49px;
+                }
+
+            }
+
+            button {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                align-items: center;
+                color: #000;
+                gap: 10px;
+                width: 150px;
+                height: 50px;
+                background: #fff;
+                border-color: transparent;
+            }
+        }
+    }
+
+}
+
+#collection20 {
+    .fall-collection {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        height: 700px;
+        align-items: center;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .fall-collection-description {
+            padding-left: 30px;
+
+            @include mobile {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            h1 {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 37px;
+                color: #000;
+
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 89px;
+                letter-spacing: 0.04em;
+                color: #000;
+
+                @include mobile {
+                    line-height: 59px;
+                }
+            }
+
+            button {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                align-items: center;
+                color: #fff;
+                gap: 10px;
+                width: 150px;
+                height: 50px;
+                background: #000;
+                border-color: transparent;
+            }
+        }
+    }
+
+    .fall-collection-img img {
+        width: 264px;
+        height: 512px;
+
+        @include mobile {
+            width: 382px;
+            height: 639px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+#inspired {
+    height: 500px;
+
+    .inspired-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        background-image: url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/augustinelitek7jiv/img-YDz318GZ0WuvBwLg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .inspired-text p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        color: #fff;
+    }
+}
+
+#products {
+    height: 100%;
+    padding-bottom: 20px;
+
+    .product-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        height: 800px;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+        }
+
+        .product-item {
+            display: flex;
+            flex-direction: column;
+
+            .item-img img {
+                width: 600px;
+                height: 432px;
+
+                @include mobile {
+                    width: 330px;
+                    height: 238px;
+                }
+            }
+
+            .item-description {
+                p:first-child {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 25px;
+                    line-height: 49px;
+                    letter-spacing: 0.04em;
+                    color: #000;
+                }
+
+                p:last-child {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: #000;
+
+                }
+
+                button {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    align-items: center;
+                    color: #fff;
+                    width: 150px;
+                    height: 50px;
+                    background: #000;
+                    border-color: transparent;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+#join {
+    height: 100%;
+
+    .join-content {
+        background-image: url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/augustinelitek7jiv/img-m57zVv6WWeTX3eep.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+
+        @include mobile {
+            height: 100%;
+            padding-bottom: 20px;
+        }
+
+        .join-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-top: 60px;
+            padding-left: 60px;
+
+            .join-title p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 35px;
+                color: #fff;
+
+                @include mobile {
+                    font-size: 30px;
+                }
+            }
+
+            .join-text p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 56px;
+                color: #fff;
+                width: 770px;
+                padding-bottom: 30px;
+
+                @include mobile {
+                    font-size: 46px;
+                    width: 470px;
+                }
+            }
+
+            .join-form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    width: 382px;
+                    height: 49px;
+                    padding-left: 10px;
+                }
+
+                button {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    align-items: center;
+                    color: #fff;
+                    width: 100px;
+                    height: 50px;
+                    background: #000;
+                    border-color: transparent;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 70px;
+    background-color: rgb(236, 236, 236);
+    height: 300px;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+      height: 400px;
+      align-items: flex-start;
+      padding-top: 50px;
+      padding-left: 50px;
+      justify-content: flex-start;
+
+    }
+
+    .footer-menu {
+        .menu-list {
+            .menu-items {
+                padding-bottom: 20px;
+
+                a {
+                    list-style-type: none;
+                    text-decoration: underline;
+                    color: #000;
+                }
+            }
+
+        }
+
+    }
+
+    .footer-help {
+        padding-right: 70px;
+
+        .help-text {
+            font-size: 30px;
+            padding-bottom: 40px;
+            @include mobile {
+                font-size: 25px;
+                padding-top: 30px;
+            }
+        }
+
+        a {
+            list-style-type: none;
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .help-icons {
+            padding-top: 40px;
+
+            .fa-brands {
+                margin-right: 20px;
+            }
+        }
+    }
+
+}
